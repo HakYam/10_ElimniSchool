@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "janna";
+    src: local ("janna"), url("../fonts/janna.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "janna";
+    src: local ("janna"), url("../fonts/janna-bold.woff") format("woff");
+    font-weight: bold;
+}
+
+
+@import 'config/variables';
+body {
+    background-color: $main-bg-clr;
+    font-family: janna;
+}
