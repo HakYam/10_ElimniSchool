@@ -61,17 +61,17 @@ header {
                 margin-left: 15px;
                 color: $main-color;
                 cursor: pointer;
-                
             }
 
-            @media (max-width: 991.98px) {
+            @media (max-width: 992px) {
                 margin-right: 15px;
                 margin-bottom: 10px;
-
                 &-container {
                     display: none;
                 }
-
+                i {
+                    display: none;
+                }
             }
 
             &-container {
@@ -121,7 +121,7 @@ header {
         }
 
         .login-mobile {
-            
+            display: none;
              a {
                 text-decoration: none;
                 color: $black-color;
@@ -141,9 +141,10 @@ header {
                 
             }
 
-            @media (max-width: 991.98px) {
+            @media (max-width: 992px) {
                 margin-right: 15px;
                 margin-bottom: 10px;
+                display: block;
             }
         }
 
