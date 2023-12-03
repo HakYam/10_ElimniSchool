@@ -1,0 +1,54 @@
+@import 'config/variables';
+@import 'config/mixins';
+
+.login-page-container {
+    margin-top: 110px;
+    margin-bottom: 60px;
+    max-width: 90%;
+    .forget-password {
+        text-decoration: none;
+        color: $gray-color;
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+.form-login-reg {
+    background-color: $white-color;
+    padding: 20px;
+    padding-top: 25px;
+    box-shadow: #dddada 0px 0px 20px;
+    border: 1px solid $gray-color;
+    border-top: none;
+    border-radius: 5px;
+    margin-bottom: 25px;
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 0;
+    margin-right: 5px;
+    font-size: 18px;
+    color: $black-color;
+    border-radius: 5px;
+  }
+
+  .nav-pills .nav-link.active {
+    color: $white-color;
+    background-color: $main-color;
+    font-size: 18px;
+    border-radius: 5px;
+   
+  }
+
+  .btn-floating {
+    font-size: 1.25rem;
+    
+  }
+
+  .button {
+    @include button($main-color, $white-color, $main-color);
+
+font-size: 18px;
+
+}

@@ -9,10 +9,176 @@
     src: local ("janna"), url("../fonts/janna-bold.woff") format("woff");
     font-weight: bold;
 }
-
-
+@import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'config/variables';
+@import 'config/mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: $main-bg-clr;
     font-family: janna;
 }
+
+header {
+    .navbar {
+        border-bottom: 1px solid $gray-color;
+        background-color: $main-bg-clr;
+        transition: ease-in-out .5s;
+        &-brand {
+            
+            font-size: 25px;
+        }
+        #logo {
+            width: 80px;
+        }
+        .nav-link {
+            color: $black-color;
+            font-size: 20px;
+            margin-left: 15px;
+            transition: all .5s;
+
+            &:hover {
+                color: $main-color;
+                text-decoration: underline;
+                text-underline-offset: 8px;
+            }
+
+            @media (max-width: 991.98px) {
+                margin-right: 10px;
+
+            }
+        }
+
+        .login {
+            position: relative;
+
+            i {
+                font-size: 30px;
+                margin-left: 15px;
+                color: $main-color;
+                cursor: pointer;
+                
+            }
+
+            @media (max-width: 991.98px) {
+                margin-right: 15px;
+                margin-bottom: 10px;
+
+                &-container {
+                    display: none;
+                }
+
+            }
+
+            &-container {
+                box-shadow: $gray-color 0px 0px 50px;
+                position: absolute;
+                width: 240px;
+                height: 70px;
+                background-color: #fff;
+                border: 1px solid $gray-color;
+                text-align: center;
+                padding-top: 22px;
+                border-radius: 10px;
+                top: 50px;
+                right: -115px;
+                visibility: hidden;
+                transition: all .5s;
+                z-index: 10;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: #fff;
+                    transform: rotate(45deg) translateX(50%);
+                    top: -18px;
+                    right: 52%;
+                    border-top: 1px solid $gray-color;
+                    border-left: 1px solid $gray-color;
+                }
+
+                .button {
+                    @include button($main-color, $white-color, $main-color);
+                    visibility: hidden;
+                }
+            }
+
+            &:hover {
+                .login-container {
+                    visibility: visible;
+
+                    .button {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        .login-mobile {
+            
+             a {
+                text-decoration: none;
+                color: $black-color;
+                font-size: 20px;
+                &:hover {
+                    color: $main-color;
+                    text-decoration: underline;
+                    text-underline-offset: 8px;
+                }
+            }
+
+            
+            i {
+                font-size: 30px;
+                margin-left: 10px;
+                color: $main-color;
+                
+            }
+
+            @media (max-width: 991.98px) {
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .login-button {
+            .button {
+                @include button($main-color, $white-color, $main-color);
+                font-size: 16px;
+                width: 50%;
+                margin-top: 15px auto;
+                text-align: center;
+                display: none;
+            }
+        }
+
+    }
+
+}
+
+.slider {
+    .carousel-item img 
+    { 
+        max-height: 600px; /* Replace 500px with the desired height */
+    }
+    .carousel-indicators button {
+        border-radius: 50%; /* Makes the indicators circular */
+        width: 12px; /* Width of the circle */
+        height: 12px; /* Height of the circle */
+        background-color: $main-color; /* Color of the indicator */
+        border: none; /* Removes the border */
+        box-shadow: none; /* Optional: Removes box shadow if there is any */
+    }
+    
+    .carousel-indicators .active {
+        background-color: darken($main-color , 30); /* Different color for the active indicator */
+    }
+}
+
+

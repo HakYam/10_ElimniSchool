@@ -4,19 +4,41 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
 module.exports = {
-    entry: './src/js/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'assets/js/[name].js'
+    
+    mode: 'development',
+    entry: './src/js/entry.js',
+  
+    performance: {
+      hints: false  // Disable performance hints
     },
-    mode: 'development', // Set mode to 'development'
+    output: {
+        
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'js/bundle.js',
+    },
+    devServer: {
+        static: {
+          directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 9000,
+        open: true,
+        liveReload: true,
+        devMiddleware: {
+        writeToDisk: true
+        }
+      },
+    
     module: {
         rules: [
             {
-                test: /\.js$/, // Regex for JavaScript files
-                exclude: /node_modules/, // Exclude node_modules
+                test: /\.js$/, // Add Babel loader for JS files
+                exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader', // Use babel-loader
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 },
             },
             {
@@ -68,24 +90,19 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'assets/css/[name].css',
-            chunkFilename: 'assets/css/[id].css',
+            
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
         }),
+                new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: './src/login.html',
+        }),
+
+
         // Autoprefixer is configured in postcss-loader options, not here
     ],
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'dist'),
-        },
-        compress: true,
-        port: 8081,
-        open: true,
-        hot: true,
-        devMiddleware: {
-            writeToDisk: true,
-        },
-    }
+    
 };
