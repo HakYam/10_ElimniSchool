@@ -9,6 +9,7 @@
     src: local ("janna"), url("../fonts/janna-bold.woff") format("woff");
     font-weight: bold;
 }
+
 @import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'config/variables';
@@ -26,15 +27,18 @@ body {
 header {
     .navbar {
         border-bottom: 1px solid $gray-color;
-        background-color: $main-bg-clr;
+        background-color: $main-bg-color;
         transition: ease-in-out .5s;
+
         &-brand {
-            
+
             font-size: 25px;
         }
+
         #logo {
             width: 80px;
         }
+
         .nav-link {
             color: $black-color;
             font-size: 20px;
@@ -66,9 +70,11 @@ header {
             @media (max-width: 992px) {
                 margin-right: 15px;
                 margin-bottom: 10px;
+
                 &-container {
                     display: none;
                 }
+
                 i {
                     display: none;
                 }
@@ -122,10 +128,12 @@ header {
 
         .login-mobile {
             display: none;
-             a {
+
+            a {
                 text-decoration: none;
                 color: $black-color;
                 font-size: 20px;
+
                 &:hover {
                     color: $main-color;
                     text-decoration: underline;
@@ -133,12 +141,12 @@ header {
                 }
             }
 
-            
+
             i {
                 font-size: 30px;
                 margin-left: 10px;
                 color: $main-color;
-                
+
             }
 
             @media (max-width: 992px) {
@@ -164,22 +172,58 @@ header {
 }
 
 .slider {
-    .carousel-item img 
-    { 
-        max-height: 600px; /* Replace 500px with the desired height */
+    .carousel-item img {
+        max-height: 600px;
+        /* Replace 500px with the desired height */
     }
+
     .carousel-indicators button {
-        border-radius: 50%; /* Makes the indicators circular */
-        width: 12px; /* Width of the circle */
-        height: 12px; /* Height of the circle */
-        background-color: $main-color; /* Color of the indicator */
-        border: none; /* Removes the border */
-        box-shadow: none; /* Optional: Removes box shadow if there is any */
+        border-radius: 50%;
+        /* Makes the indicators circular */
+        width: 12px;
+        /* Width of the circle */
+        height: 12px;
+        /* Height of the circle */
+        background-color: $main-color;
+        /* Color of the indicator */
     }
-    
+
     .carousel-indicators .active {
-        background-color: darken($main-color , 30); /* Different color for the active indicator */
+        background-color: darken($main-color , 30);
+        /* Different color for the active indicator */
     }
 }
 
+.activites {
+    .welcom-text {
+        font-weight: bolder;
+        font-size: 17px;
+        color: $gray-dark-color;
+    }
 
+    h3 {
+        color: $main-color;
+    }
+    i{
+        color: $main-color;
+    }
+
+    .card {
+        box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.1);
+        background-color: $main-bg-color;
+
+        h5 {
+            font-weight: bolder;
+            color: $main-color;
+            padding-bottom: 10px;
+        }
+
+        i {
+            color: $main-color;
+            padding-bottom: 30px;
+        }
+        .card-body {
+            text-align: center;
+        }
+    }
+}
