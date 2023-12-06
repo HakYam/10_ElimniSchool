@@ -7,6 +7,7 @@ module.exports = {
     
     mode: 'development',
     entry: './src/js/entry.js',
+    
   
     performance: {
       hints: false  // Disable performance hints

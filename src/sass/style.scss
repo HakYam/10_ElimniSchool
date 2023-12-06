@@ -14,6 +14,8 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'config/variables';
 @import 'config/mixins';
+@import 'config/swiper.scss';
+
 
 * {
     padding: 0;
@@ -172,6 +174,7 @@ header {
 }
 
 .slider {
+    margin-top: 100px;
     .carousel-item img {
         max-height: 600px;
         /* Replace 500px with the desired height */
@@ -179,25 +182,21 @@ header {
 
     .carousel-indicators button {
         border-radius: 50%;
-        /* Makes the indicators circular */
         width: 12px;
-        /* Width of the circle */
         height: 12px;
-        /* Height of the circle */
         background-color: $main-color;
-        /* Color of the indicator */
+
     }
 
     .carousel-indicators .active {
         background-color: darken($main-color , 30);
-        /* Different color for the active indicator */
     }
 }
 
 .activites {
     .welcom-text {
-        font-weight: bolder;
-        font-size: 17px;
+        
+        font-size: 22px;
         color: $gray-dark-color;
     }
 
@@ -225,5 +224,17 @@ header {
         .card-body {
             text-align: center;
         }
+    }
+}
+
+.students h3{
+    color: $main-color;
+}
+
+.contact {
+    background-color: $main-bg-color;
+
+    i, span{
+        color: $main-color;
     }
 }

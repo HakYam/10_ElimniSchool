@@ -7,12 +7,13 @@
     <meta name="description" content="مدرسة علمني">
     <title>مدرسة علمني | الرئيسية</title>
     <script defer type=text/html src="{require('./js/entry.js')}"></script>
+
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg  " id="navbar">
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
             <div class="container ">
                 <a class="navbar-brand" href="index.html">
                     <img src="./images/logo.png" id="logo" alt="logo">
@@ -106,7 +107,7 @@
                 <!-- First Card -->
                 <div class="col-md-6">
                     <!-- to make all card same hight >> d-flex align-items-stretch -->
-                    <div class="col d-flex align-items-stretch"> 
+                    <div class="col d-flex align-items-stretch">
                         <div class="card mt-4">
                             <div class="card-body">
                                 <i class="fa-solid fa-book-open fa-2xl"></i>
@@ -173,6 +174,102 @@
         </div>
     </section>
 
+    <section class="container my-5 students">
+        <h3 class="text-center pb-4">طلاب مدرسة علمني</h3>
+        <div class="swiper mySwiper pt-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/std1.jpeg" alt="">
+                    <h4 class="studentName pt-2">قاسم الحسن</h4>
+                    <p class="studentBithDate">14/7/1995</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std2.jpeg" alt="">
+                    <h4 class="studentName pt-2">سليم العلي</h4>
+                    <p class="studentBithDate">17/11/1992</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std3.jpeg" alt="">
+                    <h4 class="studentName pt-2">خالد المهنا</h4>
+                    <p class="studentBithDate">23/5/1995</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std4.jpeg" alt="">
+                    <h4 class="studentName pt-2">جمعة المهنا</h4>
+                    <p class="studentBithDate">21/7/1995</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std5.jpeg" alt="">
+                    <h4 class="studentName pt-2">خالد المهنا</h4>
+                    <p class="studentBithDate">23/5/1995</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std6.jpeg" alt="">
+                    <h4 class="studentName pt-2"> صبري الحمد</h4>
+                    <p class="studentBithDate">17/5/1991</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std1.jpeg" alt="">
+                    <h4 class="studentName pt-2">خالد السالم</h4>
+                    <p class="studentBithDate">14/2/1993</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std2.jpeg" alt="">
+                    <h4 class="studentName pt-2">جمعة العلي </h4>
+                    <p class="studentBithDate">11/1/1995</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std3.jpeg" alt="">
+                    <h4 class="studentName pt-2"> علاء محمد</h4>
+                    <p class="studentBithDate">13/5/1999</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/std5.jpeg" alt="">
+                    <h4 class="studentName pt-2"> سعد حسن</h4>
+                    <p class="studentBithDate">4/1/1999</p>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-center">نجوم المدرسة</h1>
+    </section>
+
+    <section class="contact">
+        <section class="container-fluid p-5">
+            <h3 class="text-center mb-5">تواصل معنا</h3>
+            <div class="container">
+            <div class="row g-0">
+                <!-- Contact Information -->
+                <div class="col-12 col-md-3">
+                    <div class="mb-3">
+                        <i class="fas fa-phone-alt "></i>   <span>رقم الهاتف :</span> 902345678990+
+                    </div>
+                    <div class="mb-3">
+                        <i class="fas fa-map-marker-alt"></i> <span>العنوان :</span>  123 تركيا، اسطنبول 
+                    </div>
+                    <div class="mb-3"> 
+                        <i class="fas fa-envelope"></i>  <span>البريد الإلكتروني :</span> example@email.com 
+                    </div>
+                </div>
+        
+                <!-- Embedded Map -->
+                <div class="col-12 col-md-9">
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12732.314062739615!2d37.39000747864913!3d37.079436824050596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1531e6b4f7f18c2f%3A0xc02e8b35116baad0!2sGaziantep!5e0!3m2!1sen!2str!4v1701865315421!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+    </section>
 </body>
+
 
 </html>
