@@ -39,12 +39,16 @@
         text-align: center;
     }
 
+
+
     &-pagination-bullet-active {
-        background: $main-color !important
+        background-color: $main-color !important;
+
     }
 
     &-slide {
-        border: $gray-color 1px solid;
+        border: $card-brder-color 1px solid;
+
     }
 }
 
