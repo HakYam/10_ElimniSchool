@@ -175,6 +175,7 @@ header {
 
 .slider {
     margin-top: 100px;
+
     .carousel-item img {
         max-height: 600px;
         /* Replace 500px with the desired height */
@@ -195,10 +196,11 @@ header {
 
 .activites {
     .welcom-text {
-        
+
         font-size: 22px;
         color: $gray-dark-color;
-        @media (max-width: 992px){
+
+        @media (max-width: 992px) {
             width: 80% !important;
         }
     }
@@ -207,13 +209,14 @@ header {
     h3 {
         color: $main-color;
     }
-    i{
+
+    i {
         color: $main-color;
     }
 
     .card {
         border-color: $card-brder-color;
-        
+
         background-color: $main-bg-color;
 
         h5 {
@@ -226,72 +229,86 @@ header {
             color: $main-color;
             padding-bottom: 30px;
         }
+
         .card-body {
             text-align: center;
         }
     }
 }
 
-.students h3{
+.students h3 {
     color: $main-color;
 }
 
 .star {
-    .start-title i:first-child, .start-title i:nth-child(2), .start-title i:nth-child(3) {
+
+    .start-title i:first-child,
+    .start-title i:nth-child(2),
+    .start-title i:nth-child(3) {
         margin-right: 10px;
         color: $golden;
     }
-    
-    .start-title i:nth-last-child(1), .start-title i:nth-last-child(2), .start-title i:nth-last-child(3) {
-        margin-left: 10px; 
+
+    .start-title i:nth-last-child(1),
+    .start-title i:nth-last-child(2),
+    .start-title i:nth-last-child(3) {
+        margin-left: 10px;
         color: $golden;
     }
+
     .star-title {
-        margin-left:15px;
-        margin-right:15px;
-        
+        margin-left: 15px;
+        margin-right: 15px;
+
     }
-    
+
     .card-body {
         background-color: $golden;
+
         h5 {
             color: $black-color;
             font-size: 25px;
             font-weight: 600;
         }
-        p{
+
+        p {
             color: $gray-dark-color;
             font-size: 20px;
-            
+
 
         }
-        img{
+
+        img {
             border-bottom-left-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
         }
+
         .detalis-btn {
             @include button($white-color, $gray-dark-color, $gray-dark-color );
         }
     }
 }
+
 .contact {
     background-color: $main-bg-color;
     position: relative;
+    border-top: $gray-color solid 1px;
 
-    h3{
+
+    h3 {
         color: $main-color;
     }
-    i, span{
+
+    i,
+    span {
         color: $main-color;
     }
-    iframe { 
-        
+
+    iframe {
+
         // remove all pading in mobile version
-        @media (max-width: 768px){
-            width: 100% !important;
-            max-width: 100% !important;
-            position: absolute;
-            right: 0;
+        @media (max-width: 768px) {
+            margin-top: 20px;
         }
     }
 }
