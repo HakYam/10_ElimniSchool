@@ -1,0 +1,104 @@
+$firstGrade-bg-color : #0f215f;
+
+.overlay {
+    background-image: url(../images/slider2.jpeg);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 200px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($firstGrade-bg-color , 0.8);
+        z-index: 2;
+    }
+
+    .rightCol {
+        padding-top: 190px;
+
+        h1,h3 {
+
+            color: $white-color;
+            z-index: 4;
+
+            @media (max-width:768px) {
+                font-size: xxx-large;
+            }
+
+            @media (max-width:576px) {
+                font-size: xx-large;
+            }
+        }
+
+        img {
+            z-index: 4;
+        }
+    }
+
+    .leftCol {
+        z-index: 3;
+
+        img {
+            margin-top: 120px;
+            max-width: 600px;
+
+            @media (max-width:1200px) {
+                max-width: 500px;
+            }
+
+            @media (max-width:992px) {
+                max-width: 400px;
+            }
+
+            @media (max-width:768px) {
+                max-width: 380px;
+                margin-top: 30px;
+            }
+
+            @media (max-width:576px) {
+                max-width: 340px;
+                margin-top: 30px;
+            }
+        }
+
+    }
+}
+
+.aboutStudent {
+    @media (max-width:768px) {
+        padding-top: 350px;
+    }
+    @media (max-width:576px) {
+        padding-top: 300px;
+        
+    }
+    .aboutStudentTitle {
+        color: $main-color;
+        @media (max-width:768px) {
+            padding-top: 50px;
+        }
+    }
+    .aboutrow {
+        h4 {
+            color: $main-color;
+            
+            
+        }
+        p{
+            color: $gray-color;
+            font-size: larger;
+        }
+    }
+}
+
+
+.copyright {
+    background-color: $gray-dark-color;
+    color: $gray-color;
+}

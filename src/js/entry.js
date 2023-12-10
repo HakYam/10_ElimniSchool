@@ -6,6 +6,7 @@ import 'swiper/swiper-bundle.css';
 import './swiper.js';
 
 
+
 let lastScrollTop = 0; // Variable to store the last scroll position
 const navbar = document.getElementById('navbar'); // Replace with your navbar ID
 

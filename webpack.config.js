@@ -101,6 +101,14 @@ module.exports = {
             filename: 'login.html',
             template: './src/login.html',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'firstgrade.html',
+            template: './src/firstgrade.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'secondgrade.html',
+            template: './src/secondgrade.html',
+        }),
 
 
         // Autoprefixer is configured in postcss-loader options, not here
