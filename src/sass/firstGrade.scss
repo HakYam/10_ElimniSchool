@@ -1,4 +1,5 @@
 $firstGrade-bg-color : #0f215f;
+$firstGrade-font-color:#fa5c00;
 
 .overlay {
     background-image: url(../images/slider2.jpeg);
@@ -15,7 +16,7 @@ $firstGrade-bg-color : #0f215f;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba($firstGrade-bg-color , 0.8);
+        background: rgba($firstGrade-bg-color , 0.8) ;
         z-index: 2;
     }
 
@@ -79,7 +80,7 @@ $firstGrade-bg-color : #0f215f;
         
     }
     .aboutStudentTitle {
-        color: $main-color;
+        color: $firstGrade-font-color;
         @media (max-width:768px) {
             padding-top: 50px;
         }
@@ -98,6 +99,54 @@ $firstGrade-bg-color : #0f215f;
 }
 
 
+
+.howtobeFirst {
+    @media (max-width:768px) {
+        padding-top: 30px;
+    }
+    .custom-accordion-header {
+        padding: 0.64rem 1rem; 
+        font-size: 1rem; 
+    }
+    .accordion-button:not(.collapsed) {
+        box-shadow: none; /* Removes the shadow */
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: $firstGrade-font-color; 
+        color: white; 
+    }
+    
+    //hide origila bs5 arrows
+    .accordion-button:not(.collapsed)::after {
+        /* Hide the default arrow */
+        display: none;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        /* Add your own custom arrow icon */
+        position: relative;
+    }
+    //add fa arrows
+    .accordion-button:not(.collapsed)::before {
+        /* Using FontAwesome icon */
+        content: "\f077"; /* FontAwesome arrow icon */
+        font-family: "FontAwesome";
+        position: absolute;
+        left: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white; /* Set the color */
+    }
+}
+
+
+.lastdiv {
+    margin-top: 25px;
+    h2{
+        color: $firstGrade-font-color;
+    }
+}
 .copyright {
     background-color: $gray-dark-color;
     color: $gray-color;
