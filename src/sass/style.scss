@@ -15,9 +15,7 @@
 @import 'config/variables.scss';
 @import 'config/mixins';
 @import 'config/swiper.scss';
-@import 'firstGrade.scss';
-@import 'secondGrade.scss';
-
+@import 'studentStyle.scss';
 
 
 * {
@@ -313,6 +311,12 @@ header {
         @media (max-width: 768px) {
             margin-top: 20px;
         }
+    }
+
+    .pinImg {
+        max-width: 400px;
+
+
     }
 }
 

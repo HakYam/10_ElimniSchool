@@ -1,0 +1,106 @@
+//sudent1 colors
+$firstGrade-bg-color : #0f215f;
+$firstGrade-font-color: #fa5c00;
+
+//sudent2 colors
+$secondGrade-bg-color : #4b0333;
+$secondGrade-font-color: #5f0240;
+
+
+.sudent1 {
+    @include overlayStyle ($firstGrade-bg-color);
+}
+
+.sudent2 {
+    @include overlayStyle ($secondGrade-bg-color);
+}
+
+.about1 {
+    @include aboutStudent ($firstGrade-font-color);
+}
+
+.about2 {
+    @include aboutStudent ($secondGrade-font-color);
+}
+
+.gradeTableStudent1 {
+    @include gradeTable ($firstGrade-font-color);
+}
+
+.gradeTableStudent2 {
+    @include gradeTable ($secondGrade-font-color);
+}
+
+.rightCol {
+    padding-top: 190px;
+
+    h1,
+    h3 {
+
+        color: $white-color;
+        z-index: 4;
+
+        @media (max-width:768px) {
+            font-size: xxx-large;
+        }
+
+        @media (max-width:576px) {
+            font-size: xx-large;
+        }
+    }
+
+    img {
+        z-index: 4;
+    }
+}
+
+.leftCol {
+    z-index: 3;
+
+    img {
+        margin-top: 120px;
+        max-width: 600px;
+
+        @media (max-width:1200px) {
+            max-width: 500px;
+        }
+
+        @media (max-width:992px) {
+            max-width: 400px;
+        }
+
+        @media (max-width:768px) {
+            max-width: 380px;
+            margin-top: 30px;
+        }
+
+        @media (max-width:576px) {
+            max-width: 340px;
+            margin-top: 30px;
+        }
+    }
+
+}
+
+.aboutrow {
+    h4 {
+        color: $main-color;
+    }
+
+    p {
+        color: $gray-color;
+        font-size: larger;
+    }
+}
+
+.advicesAccStudent1 {
+    @include howtobeFirst ($firstGrade-font-color);
+}
+.advicesAccStudent2 {
+    @include howtobeFirst ($secondGrade-font-color);
+}
+
+.copyright {
+    background-color: $gray-dark-color;
+    color: $gray-color;
+}
