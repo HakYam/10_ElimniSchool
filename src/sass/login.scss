@@ -26,10 +26,14 @@
   border-radius: 5px;
   margin-bottom: 25px;
 }
+.form-check.d-flex .invalid-feedback {
+  flex-basis: 100%;
+  order: 1;
+}
 
 .nav-pills .nav-link {
   border-radius: 0;
-  margin-right: 5px;
+  
   font-size: 18px;
   color: $black-color;
   border-radius: 5px;

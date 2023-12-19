@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>مدرسة علمني | تسجيل الدخول</title>
     <script defer type=text/html src="{require('./js/entry.js')}"></script>
 </head>
+
 <body>
 
     <header>
@@ -24,8 +26,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="firstgrade.html"> 
-                             المرتبة الأولى
+                            <a class="nav-link active" aria-current="page" href="firstgrade.html">
+                                المرتبة الأولى
                             </a>
                         </li>
                         <li class="nav-item">
@@ -78,14 +80,20 @@
                         <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
                             aria-labelledby="tab-login">
                             <!-- Login Form -->
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="mb-3">
                                     <input type="email" class="form-control text-start" id="loginEmail"
-                                        placeholder="البريد الإلكتروني">
+                                        placeholder="البريد الإلكتروني" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء ادخال بريد إلكتروني صالح.
+                                    </div>
                                 </div>
                                 <div class="mb-4">
                                     <input type="password" class="form-control" id="loginPassword"
-                                        placeholder="كلمة المرور">
+                                        placeholder="كلمة المرور" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء ادخال كلمة المرور.
+                                    </div>
                                 </div>
 
                                 <p class="text-center">أو يمكنك تسجيل الدخول عبر حسابك في</p>
@@ -103,29 +111,47 @@
                         </div>
                         <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
                             <!-- Register Form -->
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="registerName" placeholder="الاسم">
+                                    <input type="text" class="form-control" id="registerName" placeholder="الاسم" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء ادخال اسم المستخدم.
+                                    </div>
                                 </div>
-                                
+
                                 <div class="mb-3">
-                                    <input type="email" class="form-control text-start" id="registerEmail"
+                                    <input type="email" class="form-control text-start" id="registerEmail" required
                                         placeholder="البريد الإلكتروني">
+                                        <div class="invalid-feedback">
+                                            الرجاء ادخال بريد إلكتروني صالح.
+                                        </div>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" id="registerPassword"
+                                    <input type="password" class="form-control" id="registerPassword" required
                                         placeholder="كلمة المرور">
+                                        <div class="invalid-feedback">
+                                            الرجاء ادخال كلمة المرور.
+                                        </div>
                                 </div>
                                 <div class="mb-4">
-                                    <input type="password" class="form-control" id="registerRepeatPassword"
+                                    <input type="password" class="form-control" id="registerRepeatPassword" required
                                         placeholder="تأكيد كلمة المرور">
+                                        <div class="invalid-feedback">
+                                            الرجاء إعادة ادخال كلمة المرور.
+                                        </div>
                                 </div>
-                                <div class="form-check d-flex justify-content-center mb-4">
-                                    <input class="form-check-input me-2 border border-primary" type="checkbox" id="registerAgree">
-                                    <label class="form-check-label " for="registerAgree">
+                                <div class="form-check d-flex  mb-4">
+                                    <div class="d-flex">
+
+                                    
+                                    <input class="form-check-input me-2 border border-primary " type="checkbox"
+                                        id="registerAgree" required>
+                                    <label class="form-check-label w-100 " for="registerAgree">
                                         أوافق على الشروط والأحكام
                                     </label>
+                                    
                                 </div>
+                            </div>
                                 <div class="d-grid">
                                     <button type="submit" class="btn button">إنشاء حساب</button>
                                 </div>
@@ -137,9 +163,9 @@
             </div>
         </div>
 
-       
+
     </main>
- 
+
 
 </body>
 
